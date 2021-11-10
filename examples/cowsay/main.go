@@ -19,6 +19,9 @@ func main() {
 		c.SendMessage(m.Chat.ID, cow, tbot.OptParseModeMarkdown)
 	})
 	bot.Start()
+	if err != nil {
+		log.Fatal(err)
+	}
 }
 
 func cowsay(text string) string {
